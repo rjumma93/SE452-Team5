@@ -3,3 +3,4 @@ Proposed tables as of now:
     Employees
     Customers
     Store_Owner
+    Payroll
