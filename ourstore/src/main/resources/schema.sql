@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS Products(
 	product_name VARCHAR(64),
 	brand_id INT,
 	category_id INT,
-	price INT,
+	price DECIMAL,
 	FOREIGN KEY(brand_id) REFERENCES Brands(brand_id),
 	FOREIGN KEY(category_id) REFERENCES Categories(category_id)
 	);
@@ -51,8 +51,7 @@ CREATE TABLE IF NOT EXISTS Promotion(
 	
 CREATE TABLE IF NOT EXISTS Income(
 	product_id INT,
-	price int,
-	date_purchased DATE,
+	price float,
 	FOREIGN KEY(product_id) REFERENCES Products(product_id)
 	);
 	
