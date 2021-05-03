@@ -1,6 +1,6 @@
 
 CREATE TABLE IF NOT EXISTS Customer(
-	id INT UNIQUE PRIMARY KEY
+	id INT UNIQUE PRIMARY KEY,
 	first_name VARCHAR(30),
 	last_name VARCHAR(30),
 	email VARCHAR(64) UNIQUE,
@@ -65,7 +65,7 @@ CREATE TABLE IF NOT EXISTS Order_items(
 	FOREIGN KEY(order_id) REFERENCES Orders(order_id)
 	);
 	
-CREATE TABLE IF NOT Admins(
+CREATE TABLE IF NOT EXISTS Admins(
 	admin_id INT PRIMARY KEY,
 	email VARCHAR(64) UNIQUE,
 	passwords VARCHAR(64)
