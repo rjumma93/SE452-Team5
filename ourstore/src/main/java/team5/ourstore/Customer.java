@@ -9,8 +9,8 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "Users")
-public class Users {
+@Table(name = "Customer")
+public class Customer {
     @Id
     @Column(name = "id")
     private int id;

@@ -1,9 +1,10 @@
 
-CREATE TABLE IF NOT EXISTS Users(
+CREATE TABLE IF NOT EXISTS Customer(
 	id INT UNIQUE PRIMARY KEY
 	first_name VARCHAR(30),
 	last_name VARCHAR(30),
 	email VARCHAR(64) UNIQUE,
+	passwords VARCHAR(64)
 	);
 	
 CREATE TABLE IF NOT EXISTS Orders(
@@ -12,7 +13,7 @@ CREATE TABLE IF NOT EXISTS Orders(
 	order_date DATE,
 	order_status VARCHAR(30),
 	shipped_date DATE,
-	FOREIGN KEY(user_id) references Users(id)
+	FOREIGN KEY(user_id) references Customer(id)
 	);
 
 CREATE TABLE IF NOT EXISTS Categories(
@@ -64,3 +65,8 @@ CREATE TABLE IF NOT EXISTS Order_items(
 	FOREIGN KEY(order_id) REFERENCES Orders(order_id)
 	);
 	
+CREATE TABLE IF NOT Admins(
+	admin_id INT PRIMARY KEY,
+	email VARCHAR(64) UNIQUE,
+	passwords VARCHAR(64)
+);
