@@ -20,10 +20,27 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	// added mongodb, web, session-core, devtools
+	// flyway (db migration), thymeleaf (html5) may not be necessary?
+	compile group: 'com.vladmihalcea', name: 'hibernate-types-52', version: '2.9.11'	
+	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+	// implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	//	implementation 'org.flywaydb:flyway-core'
+	implementation 'org.springframework.session:spring-session-core'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'org.postgresql:postgresql'
+	//	added h2
+	runtimeOnly 'com.h2database:h2'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	//	added test implementation and security test
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.security:spring-security-test'	
 }
 
 test {

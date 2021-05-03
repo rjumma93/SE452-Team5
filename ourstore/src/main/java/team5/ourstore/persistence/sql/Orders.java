@@ -1,4 +1,4 @@
-package team5.ourstore;
+package team5.ourstore.persistence.sql;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
