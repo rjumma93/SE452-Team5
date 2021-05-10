@@ -68,22 +68,26 @@
         <!-- Left -->
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link waves-effect" href="#">Home
+            <a class="nav-link waves-effect" href="home-page.html">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
-              <span class="clearfix d-none d-sm-inline-block"> Login </span>
+            <a class="nav-link waves-effect" href="#">
+              <span class="clearfix d-sm-inline-block"> Login </span>
+            </a>
           </li>
           <li class="nav-item">
-              <span class="clearfix d-none d-sm-inline-block"> Register </span>
+            <a class="nav-link waves-effect" href="register.html">
+              <span class="clearfix d-sm-inline-block"> Register </span>
+            </a>
           </li>
         </ul>
 
         <!-- Right -->
         <ul class="navbar-nav nav-flex-icons">
           <li class="nav-item">
-            <a class="nav-link waves-effect">
+            <a class="nav-link waves-effect" href="checkout-page.html">
               <span class="badge red z-depth-1 mr-1"> 1 </span>
               <i class="fas fa-shopping-cart"></i>
               <span class="clearfix d-none d-sm-inline-block"> Cart </span>
@@ -98,9 +102,55 @@
   <!-- Navbar -->
 
   <!--Main layout-->
-  <main>
+  <main class="login-form">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">Register</div>
+                    <div class="card-body">
+                        <form action="" method="">
+                            <div class="form-group row">
+                                <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="email_address" class="form-control" name="email-address" required autofocus>
+                                </div>
+                            </div>
 
-  </main>
+                            <div class="form-group row">
+                                <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+                                <div class="col-md-6">
+                                    <input type="password" id="password" class="form-control" name="password" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-md-6 offset-md-4">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="remember"> Remember Me
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    Register
+                                </button>
+                                <a href="#" class="btn btn-link">
+                                    Forgot Your Password?
+                                </a>
+                            </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</main>
   <!--Main layout-->
 
   <!--Footer-->
@@ -108,7 +158,7 @@
 
     <!--Copyright-->
     <div class="footer-copyright py-3">
-      © 2020 Copyright:
+      © 2021 Copyright:
       <a href="https://github.com/agranados0121/SE452-Team5" target="_blank"> The Firewall Four</a>
     </div>
     <!--/.Copyright-->
