@@ -13,6 +13,9 @@ configurations {
 		extendsFrom annotationProcessor
 	}
 }
+springBoot {
+    mainClassName = 'team5.ourstore.Main'
+}
 
 repositories {
 	mavenCentral()
