@@ -1,4 +1,4 @@
-package team5.ourstore;
+package team5.ourstore.Store;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,15 +9,15 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name="Order_items")
-public class OrderItems {
+@Table(name="Promotion")
+public class Promotion {
     @Id
-    @Column(name = "order_id")
-    int order_id;
+    @Column(name = "promotion_id")
+    int id;
     @Column(name = "product_id")
     int product_id;
-    @Column(name = "amt")
-    int amount;
-    @Column(name = "price")
-    float price;
+    @Column(name = "active")
+    Boolean active;
+    @Column(name = "percent")
+    float percent;
 }

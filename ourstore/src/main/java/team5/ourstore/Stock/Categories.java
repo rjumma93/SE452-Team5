@@ -1,4 +1,4 @@
-package team5.ourstore;
+package team5.ourstore.Stock;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,11 +9,12 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name="Income")
-public class Income {
+@Table(name="Categories")
+public class Categories {
     @Id
-    @Column(name = "product_id")
+    @Column(name = "category_id")
     int id;
-    @Column(name = "price")
-    float price;
+
+    @Column(name = "category_name")
+    String name;
 }

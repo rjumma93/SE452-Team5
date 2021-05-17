@@ -1,4 +1,4 @@
-package team5.ourstore;
+package team5.ourstore.Stock;
 
 import org.springframework.data.repository.CrudRepository;
 
