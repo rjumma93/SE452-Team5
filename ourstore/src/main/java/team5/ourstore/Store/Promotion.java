@@ -3,13 +3,11 @@ package team5.ourstore.Store;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 import lombok.Data;
 
 @Data
 @Entity
-@Table(name="Promotion")
 public class Promotion {
     @Id
     @Column(name = "promotion_id")
