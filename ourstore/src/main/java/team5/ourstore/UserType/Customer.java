@@ -21,4 +21,7 @@ public class Customer {
 
     @Column(name = "email")
     String email;
+
+    @Column(name="passwords")
+    String passwords;
 }
