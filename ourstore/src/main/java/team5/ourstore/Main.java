@@ -33,8 +33,7 @@ public class Main {
                 System.out.println(Customer.toString());
             });
             System.out.println("-------------------------------");
-			// added to reset repo (error when inserting UNIQUE values in data.sql?)
-			repository.deleteAll();
+			
         };
     }
 	
