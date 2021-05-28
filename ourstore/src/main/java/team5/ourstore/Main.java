@@ -8,6 +8,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 
 import team5.ourstore.Ordering.*;
 import team5.ourstore.Store.*;
+import team5.ourstore.UserType.Customer;
 import team5.ourstore.UserType.CustomerRepository;
 
 @EnableMongoRepositories(basePackageClasses = {PaymentInfo.class,
@@ -22,14 +23,15 @@ public class Main {
     }
 
     @Bean
-    public CommandLineRunner showCustomers(CustomerRepository repository){
+    public CommandLineRunner addCustomer(CustomerRepository repository){
         return(args) ->{
-            System.out.println("Displaying all customers");
-            System.out.println("-------------------------------");
-            repository.findAll().forEach((Customer) -> {
-                System.out.println(Customer.toString());
-            });
-            System.out.println("-------------------------------");
+            Customer j = new Customer();
+            j.setId(3);
+            j.setFirst_name("Sam");
+            j.setLast_name("smith");
+            j.setEmail("ssmith@google.com");
+            j.setPasswords("passwords");
+            repository.save(j);
         };
     }
 	
@@ -53,7 +55,7 @@ public class Main {
             reviewController.setUpTestData();
             shippingController.setUpTestData();
             cartController.setUpTestData();
-            System.out.println(paymentController.getAll().toString());
+            System.out.println("Mongo DB setup complete...");
         };
     }
 }
